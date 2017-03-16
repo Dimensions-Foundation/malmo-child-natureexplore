@@ -6,6 +6,11 @@ if ( !function_exists( 'malmo_child_nep_theme_setup' ) ) {
 	function malmo_child_nep_theme_setup() {
 
 		/**
+		* Include Custom Post Types
+		**/
+		require_once(  'inc/cpt-classrooms.php' );
+
+		/**
 		*		Child Theme Function
 		*		Register and enqueue the parent stylesheet
 		**/
