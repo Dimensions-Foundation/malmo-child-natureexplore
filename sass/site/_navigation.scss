@@ -1,0 +1,71 @@
+.eltd-position-right.eltd-top-bar-widget-area {
+
+	ul {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+
+		li {
+			float: left;
+			list-style: none;
+
+			a {
+				color: #58585a;
+				padding: 5px 10px;
+			}
+
+			.sub-menu {
+				display: none;
+			}
+		}
+
+		li:hover 	{
+			.sub-menu {
+				-webkit-padding-start: 0px !important;
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+
+				li {
+					flex:1;
+					background: #efefef;
+					min-width: 250px;
+					text-align: left;
+					padding: 5px;
+				}
+			}
+		}
+	}
+
+	.widget_eltd_social_icon_widget {
+		border: 0;
+	}
+}
+
+
+::selection {
+	background: none;
+}
+
+
+.eltd-footer-top {
+
+	.menu {
+
+		li:first-child {
+			text-transform: uppercase;
+		}
+
+		li {
+
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.sub-menu,
+		.sub-menu li:first-child {
+			text-transform: capitalize;
+		}
+	}
+}
