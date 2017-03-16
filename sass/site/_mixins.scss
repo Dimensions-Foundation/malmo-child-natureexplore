@@ -1,0 +1,4 @@
+@mixin white-bg-hover($fontColor) {
+	background: #ffffff;
+	color: $fontColor;
+}

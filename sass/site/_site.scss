@@ -2,9 +2,10 @@
 *		Site.SCSS
 *		This file gathers and imports all SCSS files found in Site
 **/
-@import('variables');
-@import('typography');
-@import('navigation');
+@import  "variables";
+@import "mixins";
+@import "typography";
+@import "navigation";
 
 
 /**
