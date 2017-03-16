@@ -1,0 +1,15 @@
+.white-bg-hover:hover {
+	background: #ffffff !important;
+	color: $color_grey !important;
+}
+
+a:hover,
+a:active,
+.eltd-active-item a,
+.eltd-main-menu ul li:hover a {
+	color: $color_green-light !important;
+}
+
+a:visited {
+	color: $color_grey ;
+}
