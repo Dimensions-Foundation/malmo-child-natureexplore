@@ -1,8 +1,28 @@
-.eltd-footer-top-holder {
-	background-color: $color_green-medium !important;
-}
+// Wrap all SCSS in the footer class
+.eltd-footer-inner {
 
-.eltd-footer-bottom-holder {
-	background-color: $color_green-dark !important;
-	padding: 15px 0 !important;
+	.eltd-footer-top-holder {
+		background-color: $color_green-medium !important;
+
+		.eltd-container-inner {
+			padding: 75px 0 !important;
+
+			.eltd-grid-col-3 {
+				border-left: 1px solid #fff;
+
+				ul li a {
+					color: #fff !important;
+				}
+			}
+		}
+	}
+
+	.eltd-footer-bottom-holder {
+		background-color: $color_green-dark !important;
+		padding: 15px 0 !important;
+
+		p {
+			margin: 0;
+		}
+	}
 }
