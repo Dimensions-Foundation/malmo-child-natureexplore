@@ -1,0 +1,24 @@
+/**
+* 		Malmo Child Theme - Nature Explore Program
+*		This file gathers and imports all SCSS for this theme in a
+*		single ordered location. It is this file that will be complied to
+*		to create the 'main.min.css' which is enqueue for this child theme
+**/
+
+/**
+*	SITE: This section gathers all sitewide design elements
+*	(i.e. typography, variables, navigation, etc...)
+**/
+@import('site/site');
+
+/**
+*	Layout: This section gathers all structural design elements
+*	(i.e. header, footer, section, article, etc...)
+**/
+@import('layout/layout');
+
+/**
+*	Module: This section gathers all self-contained design elements
+*	(i.e. images, galleries,  widgets, etc...)
+**/
+@import ('modules/modules');
