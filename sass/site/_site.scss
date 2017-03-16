@@ -5,3 +5,22 @@
 @import('variables');
 @import('typography');
 @import('navigation');
+
+
+/**
+*		MISC Site SCSS
+*		These elments are needed, but do not yet have a common grouping
+*/
+
+// Backgrounds
+.background-green-light {
+	background-color: $color_green-light !important;
+}
+
+.background-green-medium {
+	background-color: $color_green-medium !important;
+}
+
+.background-green-dark {
+	background-color: $color_green-dark !important;
+}
