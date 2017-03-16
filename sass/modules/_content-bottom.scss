@@ -1,0 +1,31 @@
+.eltd-content-bottom {
+	background-color: $color_green_light;
+
+	.eltd-container {
+		background: inherit;
+		text-align: center;
+		padding: 0;
+
+		.eltd-container-inner {
+			color: #fff;
+
+			width: 100%;
+
+			#request-resource-guide {
+				font-size: 1.5em;
+				padding: 25px 0;
+
+				.eltd-btn {
+					font-size: .75em;
+					font-weight: bold;
+					margin-left: 20px;
+				}
+			}
+
+			#newsletter {
+				background-color: $color_green_medium;
+				padding-top: 50px;
+			}
+		}
+	}
+}
