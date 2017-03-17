@@ -25,3 +25,20 @@
 .background-green-dark {
 	background-color: $color_green-dark !important;
 }
+
+.white-bg-hover:hover {
+	background: #ffffff !important;
+	color: $color_grey !important;
+}
+
+// Accordians
+.eltd-accordion-holder {
+	.eltd-title-holder {
+		background-color: $color_green-light !important;
+	}
+
+	.eltd-title-holder.ui-state-active,
+	.eltd-title-holder.ui-state-hover {
+		background-color: $color_green-medium !important;
+	}
+}
