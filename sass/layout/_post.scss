@@ -1,0 +1,20 @@
+.eltd-blog-list-holder.eltd-masonry {
+
+	.eltd-blog-list {
+
+		.eltd-blog-list-masonry-item {
+
+			.eltd-blog-list-item-inner {
+
+				.eltd-item-image {
+				margin-bottom: 0;
+				}
+
+				.eltd-item-text-holder {
+				background-color: rgba($color_grey, 0.05);
+				padding: 15px 10px;
+				}
+			}
+		}
+	}
+}
