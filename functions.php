@@ -8,7 +8,8 @@ if ( !function_exists( 'malmo_child_nep_theme_setup' ) ) {
 		/**
 		* Include Custom Post Types
 		**/
-	//	require_once(  'inc/cpt-classrooms.php' );
+		require_once(  'inc/cpt-classrooms.php' );
+		require_once(  'inc/sc-cpt_loop.php' );
 
 		/**
 		*		Child Theme Function

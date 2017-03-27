@@ -40,7 +40,7 @@ if ( !function_exists( 'nep_register_classroom_post_type' ) ) {
 			'capability_type' 		=> 'post',
 			'map_meta_cap' 			=> true,
 			'rewrite' 				=> array(
-				'slug' 			=> 'classroom',
+				'slug' 			=> 'classrooms',
 				'with_front' 	=> true,
 				'pages' 			=> true,
 				'feeds' 			=> true,
