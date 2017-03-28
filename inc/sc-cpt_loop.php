@@ -13,17 +13,16 @@ if ( !function_exists( 'nep_custom_post_type_loop_shortcode' ) ) {
 				'loop_type' => 'list'
 			), $attrs)
 		);
-
+		$newLoop = new WP_Query( array(
+			'post_type' => $type,
+			'posts_per_page' => $posts,
+			'order' => $order,
+			'orderby' => $orderby
+		) );
 		// Change layout based on layout type selected
 		switch ( $loop_type ) {
 			// Article Layout
-			case 'article':
-			$newLoop = new WP_Query( array(
-				'post_type' => $type,
-				'posts_per_page' => $posts,
-				'order' => $order,
-				'orderby' => $orderby
-			) ); ?>
+			case 'article':	?>
 			<section class="<?php echo 'nep_'.$type.'_'.$loop_type.'_loop_container' ; ?>">
 				<?php if ($newLoop->have_posts()) :
 					while ($newLoop->have_posts()) : $newLoop->the_post(); ?>
@@ -41,13 +40,7 @@ if ( !function_exists( 'nep_custom_post_type_loop_shortcode' ) ) {
 			break;
 			// Unordered List Layout (DEFAULT)
 			case 'list':
-			default:
-			$newLoop = new WP_Query( array(
-				'post_type' => $type,
-				'posts_per_page' => $posts,
-				'order' => $order,
-				'orderby' => $orderby,
-			) ); ?>
+			default:	 ?>
 			<ul class="<?php echo 'nep_'.$type.'_'.$loop_type.'_loop_container' ; ?>">
 				<?php if ($newLoop->have_posts()) :
 					while ($newLoop->have_posts()) : $newLoop->the_post(); ?>
