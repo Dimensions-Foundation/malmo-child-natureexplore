@@ -1,44 +1,44 @@
 <?php
-
 // Check to see if setup function already exists
 if ( !function_exists( 'malmo_child_nep_theme_setup' ) ) {
 
 	function malmo_child_nep_theme_setup() {
-
 		/**
 		* Include  additional files
-		**/
+		*/
 		require(  'inc/nep_includes.php' );
 
-		/**
-		*		Child Theme Function
-		*		Register and enqueue the parent stylesheet
-		**/
+
 		function malmo_elated_child_theme_enqueue_scripts() {
+			/**
+			*		Child Theme Function
+			*		Register and enqueue the parent stylesheet
+			*/
 			wp_register_style( 'childstyle', get_stylesheet_directory_uri() . '/style.css'  );
 			wp_enqueue_style( 'childstyle' );
 		}
 		add_action('wp_enqueue_scripts', 'malmo_elated_child_theme_enqueue_scripts', 11);
 
 		if ( !function_exists( 'malmo_child_nep_enqueue_styles' ) ) {
-			/**
-			*		Child Theme Enqueue Styles
-			*		Register and enqueue the child theme stylesheet
-			**/
+
 			function malmo_child_nep_enqueue_styles() {
+				/**
+				*		Child Theme Enqueue Styles
+				*		Register and enqueue the child theme stylesheet
+				**/
 				wp_register_style( 'nep_sass_main', get_stylesheet_directory_uri() . '/sass/main.min.css'  );
 				wp_enqueue_style( 'nep_sass_main' );
-
 			}
 			add_action( 'wp_enqueue_scripts', 'malmo_child_nep_enqueue_styles' );
 		}	// END if ( !function_exists( 'malmo_child_nep_enqueue_styles' ) )
 
 		if ( !function_exists( 'malmo_child_nep_register_sidebars' ) ) {
-			/**
-			*		Register Sidebars
-			*		Setup and configure custom sidebars/widet areas
-			**/
+
 			function malmo_child_nep_register_sidebars() {
+				/**
+				*		Register Sidebars
+				*		Setup and configure custom sidebars/widet areas
+				*/
 				// Widget area just above the footer
 				register_sidebar( array(
 					'name'          =>'Footer Top',
@@ -52,8 +52,6 @@ if ( !function_exists( 'malmo_child_nep_theme_setup' ) ) {
 			}	// END malmo_child_nep_register_sidebars()
 			add_action( 'widgets_init', 'malmo_child_nep_register_sidebars' );
 		}	// END if ( !function_exists( 'malmo_child_nep_register_sidebars' ) )
-
 	}	// END malmo_child_nep_theme_setup()
 	add_action('after_setup_theme', 'malmo_child_nep_theme_setup');
-
 }	// END if ( !function_exists( 'malmo_child_nep_theme_setup' ) )
