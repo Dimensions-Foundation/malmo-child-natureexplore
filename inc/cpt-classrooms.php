@@ -40,7 +40,7 @@ if ( !function_exists( 'nep_register_classroom_post_type' ) ) {
 			'capability_type' 		=> 'post',
 			'map_meta_cap' 			=> true,
 			'rewrite' 				=> array(
-				'slug' 			=> 'classroom',
+				'slug' 			=> 'classrooms',
 				'with_front' 	=> true,
 				'pages' 			=> true,
 				'feeds' 			=> true,
@@ -50,7 +50,8 @@ if ( !function_exists( 'nep_register_classroom_post_type' ) ) {
 				'editor',
 				'author',
 				'thumbnail',
-				'revisions'
+				'revisions',
+				'custom-fields'
 			)
 		);
 
@@ -83,7 +84,7 @@ if ( !function_exists( 'nep_register_classroom_taxonomy' ) ) {
 			'add_new_item' 				=> 'Add New ' . $singular,
 			'seperate_items_with_commas' => 'Seperate ' . $plural . ' with commas',
 			'choose_from_most_used' 		=> 'Choose from most used ' . $plural,
-			'update_item' 				=> 'Update' . $singular,
+			'update_item' 				=> 'Update ' . $singular,
 			'edit_item' 					=> 'Edit ' . $singular,
 			'not_found' 					=> 'No ' . $plural . ' found',
 			'menu_name'					=> $plural
@@ -112,8 +113,8 @@ if ( !function_exists( 'nep_register_classroom_cert_taxonomy' ) ) {
 	**/
 	function nep_register_classroom_cert_taxonomy() {
 
-		$singular = 'Certification';
-		$plural = 'Certifications';
+		$singular = 'Organization Type';
+		$plural = 'Organization Types';
 
 		$labels = array(
 			'name' 						=> $plural,
@@ -128,7 +129,7 @@ if ( !function_exists( 'nep_register_classroom_cert_taxonomy' ) ) {
 			'add_new_item' 				=> 'Add New ' . $singular,
 			'seperate_items_with_commas' => 'Seperate ' . $plural . ' with commas',
 			'choose_from_most_used' 		=> 'Choose from most used ' . $plural,
-			'update_item' 				=> 'Update' . $singular,
+			'update_item' 				=> 'Update ' . $singular,
 			'edit_item' 					=> 'Edit ' . $singular,
 			'not_found' 					=> 'No ' . $plural . ' found',
 			'menu_name'					=> $plural
@@ -141,10 +142,10 @@ if ( !function_exists( 'nep_register_classroom_cert_taxonomy' ) ) {
 			'show_admin_column' 		=> true,
 			'update_count_callback' => '_update_post_term_count',
 			'query_var' 				=> true,
-			'rewrite' 				=> array( 'slug' => 'certification' ),
+			'rewrite' 				=> array( 'slug' => 'organization_type' ),
 		);
 
-		register_taxonomy( 'certification', 'classrooms', $args );
+		register_taxonomy( 'organization_type', 'classrooms', $args );
 	}	// END nep_register_classroom_cert_taxonomy()
 
 	add_action( 'init', 'nep_register_classroom_cert_taxonomy' );
