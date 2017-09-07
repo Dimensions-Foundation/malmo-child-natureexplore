@@ -1,1 +1,12 @@
-/*Theme Name: Malmo Child - Nature ExploreTheme URI: http://malmo.elated-themes.com/Description: A child theme of Malmo Theme, built for the Nature Explore ProgramAuthor: Elated ThemesAuthor URI: http://themeforest.net/user/elated-themesVersion: 1.1.1Version Updated: March 22, 2017 by Michael KrackeTemplate: malmoText Domain: malmo-child-nep*/@import url("../malmo/style.css");
+/**
+*Theme Name: Malmo Child - Nature Explore
+*	Theme URI: http://malmo.elated-themes.com/
+*	Description: A child theme of Malmo Theme, built for the Nature Explore Program
+*	Author: Elated Themes
+*	Author URI: http://themeforest.net/user/elated-themes
+*	Version: 1.4
+*	Version Updated: Aug 22, 2017 by Michael Kracke
+*	Template: malmo
+*	Text Domain: malmo-child-nep
+*/
+@import url("../malmo/style.css");
