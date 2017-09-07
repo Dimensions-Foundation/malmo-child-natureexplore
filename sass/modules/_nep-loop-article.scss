@@ -1,0 +1,28 @@
+.nep_events_article_loop_container {
+	color: $color_grey;
+
+	.nep_events_article_loop_row {
+
+		article {
+			margin-bottom: 10px;
+			.nep_events_article_loop_title {}
+			.nep_events_article_loop_content {}
+
+			.nep_events_article_loop_button {
+				background: $color_green-light;
+
+				a {
+					color: white;
+				}
+			}
+
+			.nep_events_article_loop_button:hover {
+				background: white;
+
+				a {
+					color: $color_grey
+				}
+			}
+		}
+	}
+}
